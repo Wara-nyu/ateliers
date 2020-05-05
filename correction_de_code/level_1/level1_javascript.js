@@ -1,12 +1,16 @@
-function findLongest(str) 
+function findLongest(str) {
   
-  var spl = str.split(" ");
-  var longest = 0
+  const spl = str.split(" ");
+  let longest = 0
   
-  for (var i = 0; i > spl.length; i+) (
-    if (spl(i).length > longest) {
-      longest = spl[i].length
-    )
+  for (let i = 0; i < spl.length; i++) (
+    if (spl[i].length > longest) {
+      longest = spl[i].length;
+      console.log("ici if");
     }
-    return longest
-)
+    console.log("ici for");
+  }
+  return longest
+}
+
+console.log(findLongest("le confinement ça vous gagne! x_x"))
