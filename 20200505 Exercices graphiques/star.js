@@ -7,7 +7,7 @@ class Star {
     }
 
     create() {
-        fill(255);
+        fill(random(255), random(255), random(255));
         ellipse(this.starX, this.starY, this.starSize);
     }
 
