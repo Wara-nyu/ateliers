@@ -2,12 +2,11 @@ class Star {
     constructor() {
         this.starX = random(w);
         this.starY = random(h);
-        this.starSize = 10;
-        console.log("etoile crée en "+ this.starX)
+        this.starSize = random(10);
+        fill(random(255), random(255), random(255));
     }
 
     create() {
-        fill(random(255), random(255), random(255));
         ellipse(this.starX, this.starY, this.starSize);
     }
 

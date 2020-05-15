@@ -13,10 +13,9 @@ y = 100;
 
 function draw() {
   background(0);
-  if (count < 400) {
+  if (starArray.length < 40) {
     let star = new Star();
     starArray.push(star);
-    count++;
   }
   starArray.forEach(function(item){
     item.create();
