@@ -5,6 +5,9 @@ let starArray = [];
 
 function setup() {
   createCanvas(w, h);
+  for (i = 0 ; i < 40 ; i++) {
+	  starArray.push(new Star);
+  }
   //middle()
 }
 
@@ -13,10 +16,6 @@ y = 100;
 
 function draw() {
   background(0);
-  if (starArray.length < 40) {
-    let star = new Star();
-    starArray.push(star);
-  }
   starArray.forEach(function(item){
     item.create();
   })
