@@ -19,8 +19,7 @@ function draw() {
   starArray.forEach(function(item){
     item.create();
   })
-  ship();
-  move();
+  ship.principalShip();
 }
 
 function middle() {
@@ -39,11 +38,5 @@ function move() {
   }
 }
 
-function ship() {
-  fill(220);
-  triangle(x, y, x, y + 100, x + 130, y +100);
-  triangle(x, y+200, x, y + 300, x + 130, y + 200);
-  triangle(x, y + 50, x, y+250, x + 300, y + 150);
-}
 
 
