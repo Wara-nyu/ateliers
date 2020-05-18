@@ -3,6 +3,8 @@ let h = window.innerHeight;
 let count = 0;
 let starArray = [];
 let ship; 
+//let shipArray = [];
+let sideShip;
 
 function setup() {
   createCanvas(w, h);
@@ -10,20 +12,18 @@ function setup() {
 	  starArray.push(new Star);
   }
   ship = new Ship();
+  //sideShipe = new sideShip();
   //middle()
 }
-
 
 function draw() {
   background(0);
   starArray.forEach(function(item){
     item.create();
   })
+  //sideShipe.sideShipe();
   ship.principalShip();
+  ship.movePrincipalS();
 }
 
-function middle() {
-  x = width/2;
-  y = height/2;
-}
 

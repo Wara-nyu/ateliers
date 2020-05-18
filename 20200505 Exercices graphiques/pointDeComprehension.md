@@ -4,3 +4,8 @@ Quand on le mettait dans la fonction "create", le fill est lier a cette dernièr
 
 Si on instancie la couleur donne à l'étoile, on n'a plus ce clignottement.
 (à voir si on peut faire clignoté les étoiles entre couleur donner par ramdom, blanc et noir ?)
+
+
+=> il faut déclarer la variable "ship" en dehors des fonctions
+   l'assigner dans la fonction setup
+   et dessiner le vaisseau dans la fonction draw => particularité de processing.

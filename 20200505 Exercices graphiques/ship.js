@@ -13,24 +13,15 @@ class Ship {
     triangle(this.x, this.y + this.n*5, this.x, this.y + this.n*25, this.x + this.n*30, this.y + this.n*15);
   }
 
-  sideShip() {
-    this.n = random(5);//trouver comment donner un interval pour evité le 0
-    this.x -= this.n;// |!| si speed est positif this.x += this.n si speed est negatif à implémenter
-    principalShip();
-  }
 
   movePrincipalS() {
-    if((x+300) < width){
+    if((this.x + this.n*30) < width){
       this.x += 3;
     } else {
       this.x += 0;
+      starArray.forEach(function(item){
+        item.sMove();
+      });
     }
   }
-
-  moveSideS() {
-    let speed = random (10);//speed = 0 N'est pas un soucis
-    this.x += speed;
-  }
-
-  //faut-il fait une pour eliminer les ships(objets) qui sortent de la fenêtre ?
 }
