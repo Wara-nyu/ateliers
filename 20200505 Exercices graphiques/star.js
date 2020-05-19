@@ -13,12 +13,17 @@ class Star {
 	starFill(color) {
 	}
 
-    create() {
-		fill(this.starColor.r, this.starColor.g, this.starColor.b);
-        ellipse(this.starX, this.starY, this.starSize);
-    }
+  create() {
+  fill(this.starColor.r, this.starColor.g, this.starColor.b);
+      ellipse(this.starX, this.starY, this.starSize);
+  }
 
-    sMove() {
-        this.starX -= 3;
-    }
+  sMove() {
+      this.starX -= speedP;
+  }
+
+  asign() {
+    this.starX = width +5;
+    this.starY = random(h);
+  }
 }

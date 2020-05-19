@@ -7,5 +7,5 @@ Si on instancie la couleur donne à l'étoile, on n'a plus ce clignottement.
 
 
 => il faut déclarer la variable "ship" en dehors des fonctions
-   l'assigner dans la fonction setup
+   l'assigner dans la fonction setup ( si on l'assigne dans draw on le ferait à chaque frame)
    et dessiner le vaisseau dans la fonction draw => particularité de processing.

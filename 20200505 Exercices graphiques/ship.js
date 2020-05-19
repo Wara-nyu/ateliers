@@ -13,10 +13,9 @@ class Ship {
     triangle(this.x, this.y + this.n*5, this.x, this.y + this.n*25, this.x + this.n*30, this.y + this.n*15);
   }
 
-
   movePrincipalS() {
-    if((this.x + this.n*30) < width){
-      this.x += 3;
+    if((this.x + this.n*30/2) < width/2){
+      this.x += speedP;
     } else {
       this.x += 0;
       starArray.forEach(function(item){
