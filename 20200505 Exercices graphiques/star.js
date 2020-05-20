@@ -12,7 +12,6 @@ class Star {
 
   create() {
     let rand = Math.floor((Math.random() * 2));
-    console.log(rand);
     if(rand === 0) {
       fill(this.starColor.r, this.starColor.g, this.starColor.b);
       ellipse(this.starX, this.starY, this.starSize);

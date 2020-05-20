@@ -1,21 +1,22 @@
 class SideShip extends Ship {
 
-  constuctor {
-    let ship = new ship;
-    this.n = random(5);//trouver comment donner un interval pour evité le 0
-    this.x -= this.n;// |!| si speed est positif this.x += this.n si speed est negatif à implémenter
-    
+  constructor() {
+    this.n = 5;
+    this.y = 10;
+    this.x = 0;
+    //this.x -= this.n;// |!| si speed est positif this.x += this.n si speed est negatif à implémenter
   }
 
-  sideShip() {
-    ship.rincipalShip();
-  }
+//  drawShip() {
+//    super.drawShip();
+//  }
 
   moveSideS() {
-    let speed = random (10);//speed = 0 N'est pas un soucis
+    let speed = random (10);//speed = 0 N'est pas un soucis si le vaisseau est starX>heigth
     this.x += speed;
   }
 
-  //faut-il fait une pour eliminer les ships(objets) qui sortent de la fenêtre ?
-
+  function shipRand(min, max){
+   return (Math.floor(Math.random() * (max-min) + min));//Math.floor() pour avoir des int et non des float 
+  }
 }

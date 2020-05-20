@@ -3,10 +3,10 @@ class Ship {
   constructor() {
     this.x = 0;
     this.y = 100;
-    this.n = 10;
+    this.n = 10;//indice
   }
 
-  principalShip() {
+  drawShip() {
     fill(220);
     triangle(this.x, this.y, this.x, this.y + this.n*10, this.x + this.n*13, this.y + this.n*10);
     triangle(this.x, this.y + this.n*20, this.x, this.y + this.n*30, this.x + this.n*13, this.y + this.n*20);

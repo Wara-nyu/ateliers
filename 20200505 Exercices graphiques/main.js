@@ -2,9 +2,8 @@ let w = window.innerWidth;
 let h = window.innerHeight;
 let count = 0;
 let starArray = [];
-let ship; 
-//let shipArray = [];
-let sideShip;
+let ship;
+//let smallShip;
 let speedP = 3;
 
 function setup() {
@@ -13,7 +12,7 @@ function setup() {
 	  starArray.push(new Star);
   }
   ship = new Ship();
-  //sideShipe = new sideShip();
+  //smallShip = new sideShip();
 }
 
 function draw() {
@@ -25,9 +24,8 @@ function draw() {
       item.create();
     }
   })
-  //sideShipe.sideShipe();
-  ship.principalShip();
+  //smallShip.drawShip();
+  ship.drawShip();
   ship.movePrincipalS();
 }
-
 
