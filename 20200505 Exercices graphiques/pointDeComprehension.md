@@ -3,8 +3,8 @@ Quand on le mettait dans le constuctor, il affichait différente couleur, grâce
 Quand on le mettait dans la fonction "create", le fill est lier a cette dernière fonction donc à chaque frame une nouvelle couleur.
 
 Si on instancie la couleur donne à l'étoile, on n'a plus ce clignottement.
-(à voir si on peut faire clignoté les étoiles entre couleur donner par ramdom, blanc et noir ?)
-
+- this.starColor.r le tout est égal à un nombre donc on peut fait :
+`this.starColor.r = 255`
 
 => il faut déclarer la variable "ship" en dehors des fonctions
    l'assigner dans la fonction setup ( si on l'assigne dans draw on le ferait à chaque frame)

@@ -7,7 +7,7 @@ let speedP = 3;
 
 function setup() {
   createCanvas(w, h);
-  for (let i = 0 ; i < 40 ; i++) {
+  for (let i = 0 ; i < 2 ; i++) {
 	  starArray.push(new Star);
   }
   ship = new Ship();
