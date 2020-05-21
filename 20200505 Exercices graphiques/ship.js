@@ -1,6 +1,6 @@
 class Ship {
 
-  constructor() {
+  constructor(x, y, n) {
     this.x = 0;
     this.y = 100;
     this.n = 10;//indice
@@ -22,5 +22,9 @@ class Ship {
         item.sMove();
       });
     }
+  }
+
+  shipRand(min, max){
+   return (Math.floor(Math.random() * (max-min) + min));//Math.floor() pour avoir des int et non des float 
   }
 }

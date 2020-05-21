@@ -1,22 +1,21 @@
 class SideShip extends Ship {
 
-  constructor() {
-    this.n = 5;
-    this.y = 10;
-    this.x = 0;
-    //this.x -= this.n;// |!| si speed est positif this.x += this.n si speed est negatif à implémenter
-  }
-
-//  drawShip() {
-//    super.drawShip();
+//  constructor(x, y, n) {
+//    super(x, y, n);
+//    this.speed = ship.shipRand(0, 10);
+//    //this.x -= this.n;// |!| si speed est positif this.x += this.n si speed est negatif à implémenter
+//    console.log(this.speed);
 //  }
 
-  moveSideS() {
-    let speed = random (10);//speed = 0 N'est pas un soucis si le vaisseau est starX>heigth
-    this.x += speed;
+  drawShip() {
+    super.drawShip();
+    this.x = 400;
+    this.y = 400;
+    this.n = -5;
   }
 
-  shipRand(min, max){
-   return (Math.floor(Math.random() * (max-min) + min));//Math.floor() pour avoir des int et non des float 
+  moveSideS() {
+    //this.speed = ship.shipRand(0, 10);
+    this.x += this.speed;
   }
 }
