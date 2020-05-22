@@ -1,10 +1,15 @@
 class Star {
     constructor() {
-        this.starX = random(w);
-        this.starY = random(h);
-        this.starSize = /*random(7)*/ 15;
-		    this.starColor = this.randomColor();
+      this.newStar(random(w));
+      this.starSpeed = random(2) + 1;
     }
+
+  newStar(x = width + 5) {
+    this.starX = x;
+    this.starY = random(h);
+    this.starSize = random(10);
+    this.starColor = this.randomColor();
+  }
 
 	randomColor() {
 		return {r: random(255), g: random(255), b: random(255)};
@@ -19,15 +24,6 @@ class Star {
   }
 
   sMove() {
-      this.starX -= speedP;
-  }
-
-  asign() {
-//    this.starColor.r = random(255);
-//    this.starColor.g = random(255);
-//    this.starColor.b = random(255);
-    fill(this.starColor.r, this.starColor.g, this.starColor.b);
-    this.starX = width +5;
-    this.starY = random(h);
+      this.starX -= this.starSpeed;
   }
 }

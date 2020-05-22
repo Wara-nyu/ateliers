@@ -24,7 +24,4 @@ class Ship {
     }
   }
 
-  shipRand(min, max){
-   return (Math.floor(Math.random() * (max-min) + min));//Math.floor() pour avoir des int et non des float 
-  }
 }
