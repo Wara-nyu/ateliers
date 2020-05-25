@@ -21,6 +21,7 @@ class Ship {
       starArray.forEach(function(item){
         item.sMove();
       });
+      this.shipSpeed -= speedP;
     }
   }
 }

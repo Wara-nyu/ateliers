@@ -2,9 +2,10 @@ class SideShip extends Ship {
 
   constructor(shipX, shipY, shipN) {
     super(shipX, shipY, shipN);
-    this.shipSpeed = speedP + 1;
-    this.shipX = - this.shipN*30 -5;
-    this.shipY = 400;
+    this.shipSpeed = Math.floor(speedP + random(1,7));
+    console.log(this.shipSpeed);
+    this.shipX = -this.shipN*30 -5;
+    this.shipY = 100;
     this.shipN = 5;
   }
 
