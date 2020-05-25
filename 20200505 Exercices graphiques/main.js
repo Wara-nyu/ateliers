@@ -3,6 +3,7 @@ let h = window.innerHeight;
 let starArray = [];
 let ship;
 let sideShip;
+let sideShip1;
 let speedP = 3;
 
 function setup() {
@@ -11,6 +12,7 @@ function setup() {
 	  starArray.push(new Star());
   }
   ship = new Ship();
+  sideShip1 = new SideShip();
   sideShip = new SideShip();
 }
 
@@ -24,6 +26,8 @@ function draw() {
     }
   })
   sideShip.drawShip();
+  sideShip1.drawShip();
+  sideShip1.moveSideS();
   sideShip.moveSideS();
   ship.drawShip();
   ship.movePrincipalS();

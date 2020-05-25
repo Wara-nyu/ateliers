@@ -5,7 +5,7 @@ class SideShip extends Ship {
     this.shipSpeed = Math.floor(random(1,7));
     this.shipX = -this.shipN*30 -5;
     this.shipY = random(h);
-    this.shipN = random(1, 5);
+    this.shipN = random(1, 3);
   }
 
   drawShip() {
@@ -13,11 +13,11 @@ class SideShip extends Ship {
   }
 
   moveSideS() {
+
     this.shipX += this.shipSpeed;
   }
 }
 
-// speed = random(1, 7)
 // utiliser coinToss pour choisir si this.shipX est < 0 ou > width
 // valeur absolue = Math.abs(x)
 // this.shipX = width + n + 5 || this.shipX = -n - 5

@@ -8,7 +8,7 @@ class Star {
     this.starY = random(h);
     this.starSize = random(7);
     this.starColor = this.randomColor();
-    this.starSpeed = random(2) + 1;
+    this.starSpeed = random(1, 2);
   }
 
 	randomColor() {

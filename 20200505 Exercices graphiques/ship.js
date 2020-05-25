@@ -2,8 +2,8 @@ class Ship {
 
   constructor(shipX, shipY, shipN) {
     this.shipX = 0;
-    this.shipY = 100;
-    this.shipN = 10;//indice
+    this.shipY = 150;
+    this.shipN = 7;//indice
   }
 
   drawShip() {

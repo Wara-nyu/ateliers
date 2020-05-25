@@ -1,3 +1,6 @@
+=> importation de la bibliothèque js processing dans index.html ligne 7 qui va chercher via internet la bibliothèque.
+**Si vous n'avez pas de connexion vous ne pourrait pas exécuter le programme.**
+
 => **Star** 
 - Lorsqu'on ecrit `fill(red, green, blue)' est global.
 Quand on le mettait dans le constuctor, il affichait différente couleur, grâce au `random()`, à chaque frame; puis blanc car il n'y a pas de couleur donner au "pinceau" pour la fonction "create".
