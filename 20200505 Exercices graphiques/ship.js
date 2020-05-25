@@ -16,12 +16,12 @@ class Ship {
   movePrincipalS() {
     if((this.shipX + this.shipN*30/2) < width/2){
       this.shipX += speedP;
+      this.shipSpeed += speedP;
     } else {
       this.shipX += 0;
       starArray.forEach(function(item){
         item.sMove();
       });
-      this.shipSpeed -= speedP;
     }
   }
 }
