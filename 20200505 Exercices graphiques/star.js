@@ -15,8 +15,8 @@ class Star {
 		return {r: random(255), g: random(255), b: random(255)};
 	}
 
-  create() {
-    let rand = Math.floor((Math.random() * 2));
+  createStar() {
+    let rand = coinToss();
     if(rand == 0) {
       fill(this.starColor.r, this.starColor.g, this.starColor.b);
       ellipse(this.starX, this.starY, this.starSize);

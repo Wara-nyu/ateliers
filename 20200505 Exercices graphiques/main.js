@@ -20,12 +20,15 @@ function draw() {
     if (item.starX < 0) {
       item.newStar();
     } else {
-      item.create();
+      item.createStar();
     }
   })
   sideShip.drawShip();
-  //smallShip.moveSideS();
+  sideShip.moveSideS();
   ship.drawShip();
   ship.movePrincipalS();
 }
 
+function coinToss() {
+ return Math.floor((Math.random() * 2)); 
+}

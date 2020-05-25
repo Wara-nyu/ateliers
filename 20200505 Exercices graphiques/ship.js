@@ -1,27 +1,26 @@
 class Ship {
 
-  constructor(x, y, n) {
-    this.x = 0;
-    this.y = 100;
-    this.n = 10;//indice
+  constructor(shipX, shipY, shipN) {
+    this.shipX = 0;
+    this.shipY = 100;
+    this.shipN = 10;//indice
   }
 
   drawShip() {
     fill(220);
-    triangle(this.x, this.y, this.x, this.y + this.n*10, this.x + this.n*13, this.y + this.n*10);
-    triangle(this.x, this.y + this.n*20, this.x, this.y + this.n*30, this.x + this.n*13, this.y + this.n*20);
-    triangle(this.x, this.y + this.n*5, this.x, this.y + this.n*25, this.x + this.n*30, this.y + this.n*15);
+    triangle(this.shipX, this.shipY, this.shipX, this.shipY + this.shipN*10, this.shipX + this.shipN*13, this.shipY + this.shipN*10);
+    triangle(this.shipX, this.shipY + this.shipN*20, this.shipX, this.shipY + this.shipN*30, this.shipX + this.shipN*13, this.shipY + this.shipN*20);
+    triangle(this.shipX, this.shipY + this.shipN*5, this.shipX, this.shipY + this.shipN*25, this.shipX + this.shipN*30, this.shipY + this.shipN*15);
   }
 
   movePrincipalS() {
-    if((this.x + this.n*30/2) < width/2){
-      this.x += speedP;
+    if((this.shipX + this.shipN*30/2) < width/2){
+      this.shipX += speedP;
     } else {
-      this.x += 0;
+      this.shipX += 0;
       starArray.forEach(function(item){
         item.sMove();
       });
     }
   }
-
 }
