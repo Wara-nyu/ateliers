@@ -11,8 +11,10 @@ class SideShip extends Ship {
     this.shipY = random(h);
     this.shipSpeed = Math.floor(random(1,7));
     if (this.shipX > width) {
-      this.shipSpeed = -1*this.shipSpeed;
-      this.shipN = -1*this.shipN;
+      this.shipSpeed = -random(1, 2);
+      if(coinToss()) {
+        this.shipN = -1*this.shipN;
+      }
     }
   }
 
@@ -20,6 +22,3 @@ class SideShip extends Ship {
     this.shipX += this.shipSpeed;
   }
 }
-
-// si this.shipX > width => 
-// coinToss() pour -n ou +n
