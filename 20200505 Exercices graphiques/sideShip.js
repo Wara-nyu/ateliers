@@ -2,6 +2,7 @@ class SideShip extends Ship {
 
   constructor(shipX, shipY, shipN) {
     super(shipX, shipY, shipN);
+    this.shipN = random(1, 4);
     if(coinToss()) {
       this.shipX = -this.shipN*30 - 5;
     } else {
@@ -11,8 +12,8 @@ class SideShip extends Ship {
     this.shipSpeed = Math.floor(random(1,7));
     if (this.shipX > width) {
       this.shipSpeed = -1*this.shipSpeed;
+      this.shipN = -1*this.shipN;
     }
-    this.shipN = random(1, 3);
   }
 
   moveSideS() {
@@ -20,7 +21,5 @@ class SideShip extends Ship {
   }
 }
 
-// utiliser coinToss pour choisir si this.shipX est < 0 ou > width
-// valeur absolue = Math.abs(x)
-// this.shipX = width + n + 5 || this.shipX = -n - 5
-// si this.shipX = -n - 5 => speed > 0 && n > 0
+// si this.shipX > width => 
+// coinToss() pour -n ou +n

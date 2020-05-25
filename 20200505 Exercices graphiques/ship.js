@@ -1,6 +1,6 @@
 class Ship {
 
-  constructor(shipX, shipY, shipN) {
+  constructor() {
     this.shipX = 0;
     this.shipY = 150;
     this.shipN = 7;//indice
