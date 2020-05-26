@@ -2,9 +2,9 @@ let w = window.innerWidth;
 let h = window.innerHeight;
 let starArray = [];
 let ship;
+let inTheMiddle = false;
 let sideShip;
 let sideShip1;
-let speedP = 3;
 
 function setup() {
   createCanvas(w, h);
@@ -24,7 +24,12 @@ function draw() {
     } else {
       item.createStar();
     }
-  })
+  });
+  if (inTheMiddle == true) {
+    starArray.forEach(function(item){
+      item.sMove();
+    });
+  }
   sideShip.drawShip();
   sideShip1.drawShip();
   sideShip1.moveSideS();

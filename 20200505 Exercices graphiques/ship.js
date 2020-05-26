@@ -4,6 +4,7 @@ class Ship {
     this.shipX = 0;
     this.shipY = 150;
     this.shipN = 7;//indice
+    this.shipSpeed = 5;
   }
 
   drawShip() {
@@ -15,13 +16,10 @@ class Ship {
 
   movePrincipalS() {
     if((this.shipX + this.shipN*30/2) < width/2){
-      this.shipX += speedP;
-      this.shipSpeed += speedP;
+      this.shipX += this.shipSpeed;
     } else {
       this.shipX += 0;
-      starArray.forEach(function(item){
-        item.sMove();
-      });
+      inTheMiddle = true;
     }
   }
 }
