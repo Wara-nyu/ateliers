@@ -26,7 +26,11 @@ function draw() {
     }
   });
   sideShipArray.forEach(function(item){
+    if((Math.abs(item.x)-width/2)>6000) {
+      item.newShip();
+    }else{
     item.drawShip();
+    }
     item.moveSideS();
   });
   if (inTheMiddle == true) {

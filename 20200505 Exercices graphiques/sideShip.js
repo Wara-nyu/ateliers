@@ -10,10 +10,10 @@ class SideShip extends Ship {
     this.y = random(h);
     this.multiplier = random(1, 6);
     if(coinToss()) {
-      this.x = -this.multiplier*30 - random(5, 1000);
+      this.x = -this.multiplier*30 - random(5, 4000);
       this.shipSpeed = random(1, 5);
     } else {
-      this.x = width + this.multiplier*30 + random(5, 1000);
+      this.x = width + this.multiplier*30 + random(5, 4000);
       if(coinToss()) {
         this.activ = false;
         this.shipSpeed = -random(1, 3);
