@@ -37,7 +37,7 @@ Si on l'avais déclare dans le construcor, elle aura toujours la même vitesse.
    l'assigner dans la fonction setup ( si on l'assigne dans draw on le ferait à chaque frame)
    et dessiner le vaisseau dans la fonction draw => particularité de processing.
 
--
+-finalement on a pas besoin de x, y ou multifier dans le constructor ni dans le super() de sideship.
 
 
 => Puisqu'on est en processing la fonction random() peut prendre 2 paramètres pour faire un interval, on n'a donc pas besoin de faire une fonction 
