@@ -14,6 +14,8 @@ class SideShip extends Ship {
       this.shipSpeed = -random(1, 2);
       if(coinToss()) {
         this.shipN = -1*this.shipN;
+        this.shipSpeed = -random(5, 10);
+      }else{
       }
     }
   }
