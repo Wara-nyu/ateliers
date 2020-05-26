@@ -1,26 +1,24 @@
 class SideShip extends Ship {
 
-  constructor(shipX, shipY, shipN) {
-    super(shipX, shipY, shipN);
-    this.shipN = random(1, 4);
+  constructor() {
+    super();
+    this.y = random(h);
+    this.multiplier = random(1, 6);
     if(coinToss()) {
-      this.shipX = -this.shipN*30 - 5;
+      this.x = -this.multiplier*30 - 5;
+      this.shipSpeed = random(1, 5);
     } else {
-      this.shipX = width + this.shipN*30 + 5;
-    }
-    this.shipY = random(h);
-    this.shipSpeed = Math.floor(random(1,7));
-    if (this.shipX > width) {
-      this.shipSpeed = -random(1, 2);
+      this.x = width + this.multiplier*30 + 5;
       if(coinToss()) {
-        this.shipN = -1*this.shipN;
-        this.shipSpeed = -random(5, 10);
+        this.shipSpeed = -1;
       }else{
+        this.multiplier = -1*this.multiplier;
+        this.shipSpeed = -random(5, 10);
       }
     }
   }
 
   moveSideS() {
-    this.shipX += this.shipSpeed;
+    this.x += this.shipSpeed;
   }
 }
