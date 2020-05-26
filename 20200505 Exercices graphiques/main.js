@@ -27,13 +27,14 @@ function draw() {
   });
   sideShipArray.forEach(function(item){
     item.drawShip();
+    item.moveSideS();
   });
   if (inTheMiddle == true) {
     starArray.forEach(function(item){
       item.sMove();
     });
     sideShipArray.forEach(function(item){
-      item.moveSideS();
+      item.activate();
     });
   }
   ship.drawShip();
