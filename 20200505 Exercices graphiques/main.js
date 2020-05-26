@@ -29,6 +29,8 @@ function draw() {
     starArray.forEach(function(item){
       item.sMove();
     });
+    sideShip.activate();
+    sideShip1.activate();
   }
   sideShip.drawShip();
   sideShip1.drawShip();
