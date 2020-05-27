@@ -12,10 +12,8 @@ function setup() {
   }
   for (let i = 0; i < 3; i++){
     shipArray.push(new SideShip());
-    console.log(shipArray[i].multiplier);
   }
   ship = new Ship();
-  console.log(map(ship.multiplier, 1, 7, 100, 220));
 }
 
 function draw() {
@@ -34,6 +32,9 @@ function draw() {
     item.drawShip();
     }
     item.moveSideS();
+  });
+  shipArray.sort(function(ship1, ship2){
+    return Math.abs(ship1.multiplier) - Math.abs(ship2.multiplier); 
   });
   if (inTheMiddle == true) {
     starArray.forEach(function(item){
