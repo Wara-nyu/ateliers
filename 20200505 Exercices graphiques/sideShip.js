@@ -9,6 +9,7 @@ class SideShip extends Ship {
     this.activ = true;
     this.y = random(h);
     this.multiplier = random(1, 6);
+    this.shipColor = map(this.multiplier, 1, 7, 100, 220);
     if(coinToss()) {
       this.x = -this.multiplier*30 - random(5, 4000);
       this.shipSpeed = random(1, 5);

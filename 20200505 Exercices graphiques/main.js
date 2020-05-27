@@ -3,7 +3,7 @@ let h = window.innerHeight;
 let starArray = [];
 let ship;
 let inTheMiddle = false;
-let sideShipArray = [];
+let shipArray = [];
 
 function setup() {
   createCanvas(w, h);
@@ -11,9 +11,11 @@ function setup() {
 	  starArray.push(new Star());
   }
   for (let i = 0; i < 3; i++){
-    sideShipArray.push(new SideShip());
+    shipArray.push(new SideShip());
+    console.log(shipArray[i].multiplier);
   }
   ship = new Ship();
+  console.log(map(ship.multiplier, 1, 7, 100, 220));
 }
 
 function draw() {
@@ -25,7 +27,7 @@ function draw() {
       item.createStar();
     }
   });
-  sideShipArray.forEach(function(item){
+  shipArray.forEach(function(item){
     if((Math.abs(item.x)-width/2)>6000) {
       item.newShip();
     }else{
@@ -37,7 +39,7 @@ function draw() {
     starArray.forEach(function(item){
       item.sMove();
     });
-    sideShipArray.forEach(function(item){
+    shipArray.forEach(function(item){
       item.activate();
     });
   }
