@@ -17,7 +17,7 @@ class Obj {
     if(this.x >= w) {
       this.x =0;
     }else{
-      this.x += 1;
+      this.x += 3;
     }
   }
 }
