@@ -6,6 +6,7 @@ class Ship {
     this.multiplier = 7;
     this.shipSpeed = 3;
     this.shipColor = 220;
+    this.shipLength = this.multiplier*30;
   }
 
   drawShip() {
@@ -16,7 +17,7 @@ class Ship {
   }
 
   movePrincipalS() {
-    if((this.x + this.multiplier*30/2) < width/2){
+    if((this.x + this.shipLength/2) < width/2){
       this.x += this.shipSpeed;
     } else {
       this.x += 0;

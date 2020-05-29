@@ -6,17 +6,17 @@ class SideShip extends Ship {
   }
 
   newShip(){
-    this.activ = true;
+    this.trigger = true;
     this.y = random(h);
     this.multiplier = random(1, 6);
     this.shipColor = map(this.multiplier, 1, 7, 100, 220);
     if(coinToss()) {
-      this.x = -this.multiplier*30 - random(5, 4000);
+      this.x = -this.shipLength - random(5, 4000);
       this.shipSpeed = random(1, 5);
     } else {
-      this.x = width + this.multiplier*30 + random(5, 4000);
+      this.x = width + this.shipLength + random(5, 4000);
       if(coinToss()) {
-        this.activ = false;
+        this.trigger = false;
         this.shipSpeed = -random(1, 3);
       }else{
         this.multiplier = -1*this.multiplier;
@@ -26,12 +26,12 @@ class SideShip extends Ship {
   }
 
   moveSideS() {
-    if(this.activ = true){
+    if(this.trigger = true){
     this.x += this.shipSpeed;
     }
   }
 
   activate() {
-    this.activ = true;
+    this.trigger = true;
   }
 }

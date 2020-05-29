@@ -9,7 +9,7 @@ Quand on le mettait dans la fonction "create", le fill est lier a cette dernièr
 - Si on instancie la couleur donne à l'étoile, on n'a plus ce clignottement.
 Pour palier à ça, j'ai introduit une fonction qui choisi entre 0 et 1 alléatoirement. Si c'est 0, l'étoile est dessiné sinon non.
 
-- this.starColor.r le tout est égal à un nombre donc on peut fait :
+- `this.starColor.r` le tout est égal à un nombre donc on peut fait :
 `this.starColor.r = 255`
 
 - si on fait:
@@ -19,7 +19,6 @@ puis
 On aura bien une valeur pour r,g et b mais ça sera la même donc on n'aura que des nuances de gris car r = g = b.
 
 - J'ai décidé arbitrairement que l'étoile spwan à width + 5, même si pour les étoiles ça ne se voit pas (surtout avec l'effet de clignotement), je préfère faire ça.
-J'aurais le même raisonnement pour les vaisseaux.
 
 - dans la fonction newStar(), on donne en paramètre un valeur par défaut : x = width +5.
 C'est à dire que this.starX = width + 5 si on ne donne aucun paramètre lors de l'appel de cette fonction.
@@ -33,14 +32,37 @@ Si on l'avais déclare dans le construcor, elle aura toujours la même vitesse.
 
 
 => **Ship**
-- Il faut déclarer la variable "ship" en dehors des fonctions
-   l'assigner dans la fonction setup ( si on l'assigne dans draw on le ferait à chaque frame)
+- Il faut déclarer "let ship" en dehors des fonctions;
+   l'assigner dans la fonction setup ( si on l'assigne dans draw on le ferait à chaque frame);
    et dessiner le vaisseau dans la fonction draw => particularité de processing.
 
--finalement on a pas besoin de x, y ou multifier dans le constructor ni dans le super() de sideship.
+- Finalement on a pas besoin de x, y ou multifier dans le constructor ni dans le super() de sideship.
+Car on n'a pas mis en paramètre du constucteur dans ship.js.
+
+- J'ai déclaré `this.shipLength = this.multiplier*30' dans le constructeur de `Ship`
+mais je ne peux pas l'utiliser dans drawShip()
+car il prendra toujours la valeur de `this.multiplier = 7` pour dessinner les vaisseauxdonc elle auront des formes étranges.
+
+- J'ai mis le spawn des petits vaisseaux entre 5 et 4000, pour ne pas les "croiser" trop souvent.
+c'est le même raisonnement qui m'incite à ne faire réatribuer un nouveau vaisseau qu'à partir de 6000px comparer au centre de la fenêtre.
+
+- J'ai introduit la variable inTheMiddle pour pouvoir intéragire plus facilement avec les differents fichiers/fonctions/classes plus facilement et non tout mettre dans ship pour activer les différentes chose qui sont lier à ce paramètre.
+
+- Pour que les vaisseaux qui sont dans le même sens que le vaiseau principale
+mais qui on une vitesse négative, n'apparaissent pas avant que le vaisseau principale n'atteigne le milieu de l'écran,
+On a introduit une variable `this.trigger` pour dire si les vaisseaux sont dans cette catégorie
+si oui `this.trigger = False`
+et il faudrat que la fonction activate() passe `this.trigger = true` lorsque le vaisseaux principal atteint le centre de la fenêtre.
+(c'est pour faire un effet de caméra, le vaisseau principale entre dans le cadre puis lorsqu'il atteint le centre la caméra le suit.
+il devient donc étranque que les vaisseaux qui sont dans cette catégorie (qui sont "stationnaire") rendtre dans le cadre de la caméra sans qu'elle ne bouge avant)
 
 
-=> Puisqu'on est en processing la fonction random() peut prendre 2 paramètres pour faire un interval, on n'a donc pas besoin de faire une fonction 
+=> la fonction "coinToss" ne fait que "lancer une pièce" pour me donner soit O soit 1.
+
+
+=> Puisqu'on est en processing 
+la fonction random() peut prendre 2 paramètres pour faire un interval,
+on n'a donc pas besoin de faire une fonction 
 > Rand(min, max){
 >   return (Math.floor(Math.random() * (max-min) + min));
 > }
