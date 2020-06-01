@@ -57,6 +57,8 @@ et il faudrat que la fonction activate() passe `this.trigger = true` lorsque le 
 il devient donc étranque que les vaisseaux qui sont dans cette catégorie (qui sont "stationnaire") rendtre dans le cadre de la caméra sans qu'elle ne bouge avant)
 
 
+=> pour que les vaisseaux les plus petits ne passe pas devant les plus gros, à la ligne 36,37,38 on trie l'shipArray.
+
 => la fonction "coinToss" ne fait que "lancer une pièce" pour me donner soit O soit 1.
 
 
