@@ -5,7 +5,7 @@ class Ship {
     this.y = 150;
     this.multiplier = 7;
     this.shipSpeed = 3;
-    this.shipColor = 220;
+    this.shipColor = 200;
     this.shipLength = this.multiplier*30;
   }
 
