@@ -69,3 +69,8 @@ on n'a donc pas besoin de faire une fonction
 >   return (Math.floor(Math.random() * (max-min) + min));
 > }
 D'ailleurs math.floor transforme en int le resultat du random.
+
+- J'ai voulu faire une variable `shipLength` pour ne plus à retenir `*30`, mais les sideShip prennaient que le multiplier = 7 car j'avais oublier de le réassigné dans le constucteur de sideShip.
+De plus il faut le réassigner losqu'on dit que this.multiplier = -1*thisMultiplier.
+
+- la `function` de sort peut être remplacer par `=>` cela évite de mettre `function` et `return` (quelque ligne d'économiser) : à approffondir.

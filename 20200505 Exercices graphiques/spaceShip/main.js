@@ -33,9 +33,7 @@ function draw() {
     }
     item.moveSideS();
   });
-  shipArray.sort(function(ship1, ship2){
-    return Math.abs(ship1.multiplier) - Math.abs(ship2.multiplier); 
-  });
+  shipArray.sort((ship1, ship2) => abs(ship1.multiplier) - abs(ship2.multiplier));
   if (inTheMiddle == true) {
     starArray.forEach(function(item){
       item.sMove();
