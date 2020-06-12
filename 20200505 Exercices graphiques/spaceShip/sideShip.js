@@ -10,7 +10,6 @@ class SideShip extends Ship {
     this.y = random(h);
     this.multiplier = random(1, 6);
     this.shipColor = map(this.multiplier, 1, 7, 0, 200);
-    this.shipLength = this.multiplier*30;
     if(coinToss()) {
       this.x = -this.shipLength - random(5, 4000);
       this.shipSpeed = random(1, 5);
@@ -21,7 +20,6 @@ class SideShip extends Ship {
         this.shipSpeed = -random(1, 3);
       }else{
         this.multiplier = -1*this.multiplier;
-        this.shipLength = this.multiplier*30;
         this.shipSpeed = -random(5, 10);
       }
     }

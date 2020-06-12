@@ -12,8 +12,8 @@ class Ship {
   drawShip() {
     fill(this.shipColor);
     triangle(this.x, this.y, this.x, this.y + this.multiplier*10, this.x + this.multiplier*13, this.y + this.multiplier*10); //triangle rectangle du haut 
-    triangle(this.x, this.y + this.multiplier*20, this.x, this.y + this.shipLength, this.x + this.multiplier*13, this.y + this.multiplier*20);//triangle rectangle du bas
-    triangle(this.x, this.y + this.multiplier*5, this.x, this.y + this.multiplier*25, this.x + this.shipLength, this.y + this.multiplier*15);// triangle isocèle du milieu
+    triangle(this.x, this.y + this.multiplier*20, this.x, this.y + this.multiplier*30, this.x + this.multiplier*13, this.y + this.multiplier*20);//triangle rectangle du bas
+    triangle(this.x, this.y + this.multiplier*5, this.x, this.y + this.multiplier*25, this.x + this.multiplier*30, this.y + this.multiplier*15);// triangle isocèle du milieu
   }
 
   movePrincipalS() {
