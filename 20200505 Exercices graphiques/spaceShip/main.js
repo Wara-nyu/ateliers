@@ -1,12 +1,14 @@
-let w = window.innerWidth;
-let h = window.innerHeight;
+let w = document.documentElement.clientWidth; //window.innerWidth;
+let h = document.documentElement.clientHeight; //window.innerHeight;
 let starArray = [];
 let ship;
 let inTheMiddle = false;
 let shipArray = [];
 
 function setup() {
-  createCanvas(w, h);
+  let myCanvas = createCanvas(w, h);
+  myCanvas.parent('canvas');
+ // createCanvas(w, h);
   for (let i = 0 ; i < 40; i++) {
 	  starArray.push(new Star());
   }
